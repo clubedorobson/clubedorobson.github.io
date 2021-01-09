@@ -1824,22 +1824,19 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 
 
 <script> 
-function FileHelper()
+function FileHelper(pathOfFileToReadFrom)
 
 {
-    FileHelper.readStringFromFileAtPath = function(pathOfFileToReadFrom)
-    {
         var request = new XMLHttpRequest();
         request.open("GET", pathOfFileToReadFrom, false);
         request.send(null);
         var returnValue = request.responseText;
 
         return returnValue;
-    }
 }
 
 
-var text = FileHelper.readStringFromFileAtPath ( "news_1.txt" );
+var text = FileHelper ( "news_1.txt" );
 
 console.log("OIIIIIIIIIIIIIIIIII", text)
 </script>
