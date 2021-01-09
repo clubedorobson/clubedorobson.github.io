@@ -1836,13 +1836,15 @@ function FileHelper(pathOfFileToReadFrom)
 }
 
 
-var text = FileHelper ( "news_1.json" );
+const news1_test = FileHelper ( "news_1.json" );
 
-console.log("OIIIIIIIIIIIIIIIIII", text)
+console.log("OIIIIIIIIIIIIIIIIII", news1_test)
+
+document.getElementById("noticia1").innerHTML = news1_test;
 </script>
 
 <!--TAG:NOTICIA 1-->
-<div class="_label_event"><div class="feed-post-body-title gui-color-primary gui-color-hover "><div class="_ee"><a href="https://globoesporte.globo.com/futebol/times/cruzeiro/noticia/paulo-trata-estreia-no-profissional-como-sonho-cruzeiro-e-minha-casa-desde-os-13-anos.ghtml" class="feed-post-link gui-color-primary gui-color-hover">Paulo trata estreia como sonho: &quot;Cruzeiro é minha casa desde os 13 anos&quot;</a></div></div></div>
+<div id = "noticia1" class="_label_event"><div class="feed-post-body-title gui-color-primary gui-color-hover "><div class="_ee"><a href="https://globoesporte.globo.com/futebol/times/cruzeiro/noticia/paulo-trata-estreia-no-profissional-como-sonho-cruzeiro-e-minha-casa-desde-os-13-anos.ghtml" class="feed-post-link gui-color-primary gui-color-hover">Paulo trata estreia como sonho: &quot;Cruzeiro é minha casa desde os 13 anos&quot;</a></div></div></div>
 
 <div class="_label_event"><div class="feed-post-body-resumo">Zagueiro entrou no segundo tempo do jogo contra o Sampaio Corrêa</div></div>
 
