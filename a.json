@@ -1,4 +1,4 @@
-<script type=\"text/javascript\" id=\"bstn-fd-recommendation-first-fetch\" onerror=\"bstn.cb.recommendationFetchError()\" src=\"" + b() + "\"><",
+document.write("<script type=\"text/javascript\" id=\"bstn-fd-recommendation-first-fetch\" onerror=\"bstn.cb.recommendationFetchError()\" src=\"" + b() + "\"><",
 "/script>"); else { const a = document.createElement("script"); a.id = "bstn-fd-recommendation-first-fetch", a.onerror = f, a.src = b(), document.head && document.head.appendChild(a)
 }
 }), d = new Promise((a, b) => setTimeout(() => b(new Error("Timeout")),
@@ -28,7 +28,7 @@
 0 === d.length) return c; return b
 }, s = r("SETTINGS.BASTIAN"), t = (a, b) => r(a, b, s), u = (b, c) => r(b, c, a), v = a => a.reduce((a, b) => a.concat(Array.isArray(b) ? v(b) : b),
 []); e.lazy = o, f(), b.lazy || o()
-}) ({
+})({
 "config": {
 "componentPosition": 8,
 "cutRange": 12,
@@ -1019,7 +1019,7 @@
     },
     "section": "cruzeiro",
     "summary": "Zagueiro entrou no segundo tempo do jogo contra o Sampaio Corrêa e ajudou a equipe a suportar pressão para vencer por 1 a 0 fora de casa",
-    "title": "Paulo trataaaaaaa! estreia no profissional como sonho: \"Cruzeiro é minha casa desde os 13 anos\"",
+    "title": "Paulo trata estreia no profissional como sonho: \"Cruzeiro é minha casa desde os 13 anos\"",
     "url": "https://globoesporte.globo.com/futebol/times/cruzeiro/noticia/paulo-trata-estreia-no-profissional-como-sonho-cruzeiro-e-minha-casa-desde-os-13-anos.ghtml",
     "video": null
 },
@@ -3071,4 +3071,3 @@
 { lazy: false
 })
                   
-                  </script >

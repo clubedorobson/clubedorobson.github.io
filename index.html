@@ -8110,54 +8110,12 @@
                           e.cb.bundleLoadError = () => b(new Error("Couldn't load the bundle"))
                       })), g = () => {
                         const a = Array.from(document.querySelectorAll(".bstn-dedupe-url")),
-                        b = a.map(a => a.getAttribute("data-bstn-url") || a.getAttribute("href") || "").filter(a => a);
-                        return { displayedContentURLs: b }
-                      }, h = () => {
-                        q(".areatemplate-showtime", a => a.classList.add("small-collapse", "large-uncollapse")),
-                        p(".areatemplate-esquerda", a => {
-                          a.classList.remove("medium-20", "medium-offset-2"),
-                          q(a, a => a.classList.add("small-collapse", "medium-collapse", "large-uncollapse"))
-                        })
-                      },
-                      i = async () => {
-                        const a = { script: "src", link: "href" };
-                        await d(0), ["external-style", "components-script", "components-style"].forEach(b => {
-                          p("#bstn-" + b, b => {
-                            const c = a[b.tagName.toLowerCase()],
-                            d = b.getAttribute("data-" + c); d && b.setAttribute(c, d)
-                          })
-                        })
-                      },
-                      j = async () => {
-                        await f(); const a = []; a.push = (...b) => {
-                          b.forEach(({ name: a, renderFn: b }) => window.Bastian.require("feed/items/register")(a, b)),
-                          Array.prototype.push.apply(a, b)
-                        };
-                        const b = t("COMPONENTS", []); s.COMPONENTS = a, a.push(...b);
-                        const c = t("EXTERNALCOMPONENTS", []); s.EXTERNALCOMPONENTS = a, a.push(...c)
-                      },
-                      k = async () => {
-                        const a = a => {
-                          p("#feed-placeholder",
-                            b => b.style.visibility = a ? "visible" : "hidden")
-                        }, b = () => {
-                          const a = t("RECOMMENDATION.URL", t("RECOMMENDATION_URL", "")),
-                          b = ["tablet", "desktop"].includes(t("DEVICE_GROUP")) ? "" : "-smart",
-                          c = u("config.recommendation.contentId", t("RECOMMENDATION.CONTENT_ID", "feed")) + b,
-                          d = /client_id=/.test(a) ? "&content_id=" + c : "/" + c + "?type=bastian",
-                          e = window.location.hash.match(/(?:^#|&)alternative=([^&]+)/),
-                          f = e ? "&alternative=" + e[1] : "";
-                          return "" + a + d + "&page=1&limit=10&photo_size=" + "540x304/top/smart,810x456/top/smart,1080x608/top/smart" +
-                            f + "&callback=bstn.cb.recommendationFirstFetch"
-                        }, c = new Promise((c, d) => {
-                          a(!1), e.cb.recommendationFirstFetch = a => {
-                            let b; if ("string" == typeof a.tag) b = a.tag; else { const c = r("content.url", "", a[0]); b = c.slice(c.indexOf("#")) } const d =
-                              { tag: b, items: Array.isArray(a) ? a : [] }; c({ recommendationFirstFetch: d })
-                          };
-                          const f = () => d(new Error("Network error")); if (e.cb.recommendationFetchError = f,
-                            "loading" === document.readyState)
-                            document.write(
-                              "<script type=\"text/javascript\" id=\"bstn-fd-recommendation-first-fetch\" onerror=\"bstn.cb.recommendationFetchError()\" src=\"" + b() + "\"><",
+                        b = a.map(a => a.getAttribute("data-bstn-url") || a.getAttribute("href") || "").filter(a => a); return { displayedContentURLs: b }
+                      }, h = () => { q(".areatemplate-showtime", a => a.classList.add("small-collapse", "large-uncollapse")), p(".areatemplate-esquerda", a => { a.classList.remove("medium-20", "medium-offset-2"), q(a, a => a.classList.add("small-collapse", "medium-collapse", "large-uncollapse")) }) }, i = async () => { const a = { script: "src", link: "href" }; await d(0), ["external-style", "components-script", "components-style"].forEach(b => { p("#bstn-" + b, b => { const c = a[b.tagName.toLowerCase()], d = b.getAttribute("data-" + c); d && b.setAttribute(c, d) }) }) }, j = async () => { await f(); const a = []; a.push = (...b) => { b.forEach(({ name: a, renderFn: b }) => window.Bastian.require("feed/items/register")(a, b)), Array.prototype.push.apply(a, b) }; const b = t("COMPONENTS", []); s.COMPONENTS = a, a.push(...b); const c = t("EXTERNALCOMPONENTS", []); s.EXTERNALCOMPONENTS = a, a.push(...c) }, k = async () => {
+                        const a = a => { p("#feed-placeholder", b => b.style.visibility = a ? "visible" : "hidden") }, b = () => { const a = t("RECOMMENDATION.URL", t("RECOMMENDATION_URL", "")), b = ["tablet", "desktop"].includes(t("DEVICE_GROUP")) ? "" : "-smart", c = u("config.recommendation.contentId", t("RECOMMENDATION.CONTENT_ID", "feed")) + b, d = /client_id=/.test(a) ? "&content_id=" + c : "/" + c + "?type=bastian", e = window.location.hash.match(/(?:^#|&)alternative=([^&]+)/), f = e ? "&alternative=" + e[1] : ""; return "" + a + d + "&page=1&limit=10&photo_size=" + "540x304/top/smart,810x456/top/smart,1080x608/top/smart" + f + "&callback=bstn.cb.recommendationFirstFetch" }, c = new Promise((c, d) => {
+                          a(!1), e.cb.recommendationFirstFetch = a => { let b; if ("string" == typeof a.tag) b = a.tag; else { const c = r("content.url", "", a[0]); b = c.slice(c.indexOf("#")) } const d = { tag: b, items: Array.isArray(a) ? a : [] }; c({ recommendationFirstFetch: d }) }; const f = () => d(new Error("Network error")); if (e.cb.recommendationFetchError = f, "loading" === document.readyState)
+
+                            document.write("<script type=\"text/javascript\" id=\"bstn-fd-recommendation-first-fetch\" onerror=\"bstn.cb.recommendationFetchError()\" src=\"" + b() + "\"><",
                               "/script>"); else {
                                 const a = document.createElement("script"); a.id = "bstn-fd-recommendation-first-fetch", a.onerror = f, a.src = b(), document.head && document.head.appendChild(a)
                           }
@@ -9195,7 +9153,7 @@
                           },
                           "section": "cruzeiro",
                           "summary": "Zagueiro entrou no segundo tempo do jogo contra o Sampaio Corrêa e ajudou a equipe a suportar pressão para vencer por 1 a 0 fora de casa",
-                          "title": "Paulo trataaaaaaa! estreia no profissional como sonho: \"Cruzeiro é minha casa desde os 13 anos\"",
+                          "title": "Paulo trata estreia no profissional como sonho: \"Cruzeiro é minha casa desde os 13 anos\"",
                           "url": "https://globoesporte.globo.com/futebol/times/cruzeiro/noticia/paulo-trata-estreia-no-profissional-como-sonho-cruzeiro-e-minha-casa-desde-os-13-anos.ghtml",
                           "video": null
                         },
