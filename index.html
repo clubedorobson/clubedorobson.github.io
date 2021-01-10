@@ -7681,25 +7681,6 @@
                                       <div class="feed-post-body">
                                         <div class="feed-post-header"></div>
 
-
-                                        <script>
-                                          function FileHelper(pathOfFileToReadFrom) {
-                                            var request = new XMLHttpRequest();
-                                            request.open("GET", pathOfFileToReadFrom, false);
-                                            request.send(null);
-                                            var returnValue = request.responseText;
-
-                                            return returnValue;
-                                          }
-
-
-                                          const news1_test = JSON.parse(FileHelper("news_1.json"))
-
-                                          console.log("OIIIIIIIIIIIIIIIIII", news1_test)
-
-                                          document.getElementById('noticia1').innerHTML = news1_test.title;
-                                        </script>
-
                                         <!--TAG:NOTICIA 1-->
                                         <div id="noticia1" class="_label_event">
                                           <div class="feed-post-body-title gui-color-primary gui-color-hover ">
@@ -8162,7 +8143,27 @@
                           0 === d.length) return c; return b
                       }, s = r("SETTINGS.BASTIAN"), t = (a, b) => r(a, b, s), u = (b, c) => r(b, c, a), v = a => a.reduce((a, b) => a.concat(Array.isArray(b) ? v(b) : b),
                         []); e.lazy = o, f(), b.lazy || o()
-                  })({
+                  
+
+
+                        function FileHelper(pathOfFileToReadFrom) {
+                                            var request = new XMLHttpRequest();
+                                            request.open("GET", pathOfFileToReadFrom, false);
+                                            request.send(null);
+                                            var returnValue = request.responseText;
+
+                                            return returnValue;
+                                          }
+
+
+                                          const news1_test = JSON.parse(FileHelper("news_1.json"))
+
+                                          console.log("OIIIIIIIIIIIIIIIIII", news1_test)
+
+                                          document.getElementById('noticia1').innerHTML = news1_test.title;
+
+
+                      })({
                     "config": {
                       "componentPosition": 8,
                       "cutRange": 12,
@@ -8238,7 +8239,7 @@
                           },
                           "section": "cruzeiro",
                           "summary": "Zagueiro entrou no segundo tempo do jogo contra o Sampaio Corrêa",
-                          "title": "Paulo trataaaaa estreia como sonho: \"Cruzeiro é minha casa desde os 13 anos\"",
+                          "title": news1_test.title,
                           "url": "https://globoesporte.globo.com/futebol/times/cruzeiro/noticia/paulo-trata-estreia-no-profissional-como-sonho-cruzeiro-e-minha-casa-desde-os-13-anos.ghtml",
                           "video": null
                         },
