@@ -8079,8 +8079,7 @@
                   data-href="https://s3.glbimg.com/v1/AUTH_1c4eff5024b8401b9ec5d03c9280acc4/b/build/bastian-2020123f94cd70fd1e719a2ebcb64d33caa057.rest.css" />
 
                 <script>
-
-                function FileHelper(pathOfFileToReadFrom) {
+                                  function FileHelper(pathOfFileToReadFrom) {
                                         var request = new XMLHttpRequest();
                                         request.open("GET", pathOfFileToReadFrom, false);
                                         request.send(null);
@@ -8088,9 +8087,10 @@
 
                                         return returnValue;
                                       }
-                  window.news1_test = JSON.parse(FileHelper("news_1.json"))
+                  window.news1_test = JSON.parse(FileHelper("news_1.json"));
+                  </script>
 
-                  
+                <script>
                   ((a, b) => {
 
                     function c(a) {
