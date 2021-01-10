@@ -8080,15 +8080,7 @@
 
                 <script>
 
-                  /*function FileHelper(pathOfFileToReadFrom) {
-                                        var request = new XMLHttpRequest();
-                                        request.open("GET", pathOfFileToReadFrom, false);
-                                        request.send(null);
-                                        var returnValue = request.responseText;
 
-                                        return returnValue;
-                                      }
-                  const news1_test = JSON.parse(FileHelper("news_1.json"))*/
 
                   
                   ((a, b) => {
@@ -8165,6 +8157,17 @@
 
 
                       })({
+
+                                          function FileHelper(pathOfFileToReadFrom) {
+                                        var request = new XMLHttpRequest();
+                                        request.open("GET", pathOfFileToReadFrom, false);
+                                        request.send(null);
+                                        var returnValue = request.responseText;
+
+                                        return returnValue;
+                                      }
+                  const news1_test = JSON.parse(FileHelper("news_1.json"))
+
                     "config": {
                       "componentPosition": 8,
                       "cutRange": 12,
@@ -8240,7 +8243,7 @@
                           },
                           "section": "cruzeiro",
                           "summary": "Zagueiro entrou no segundo tempo do jogo contra o Sampaio Corrêa",
-                          "title": "news1_test.title",
+                          "title": news1_test.title,
                           "url": "https://globoesporte.globo.com/futebol/times/cruzeiro/noticia/paulo-trata-estreia-no-profissional-como-sonho-cruzeiro-e-minha-casa-desde-os-13-anos.ghtml",
                           "video": null
                         },
