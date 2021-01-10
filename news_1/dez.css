@@ -1,0 +1,14 @@
+body{color:purple;
+margin: 100 100;
+padding: 2 2;
+font-size: 20px}
+
+.cdr{margin:0 auto;
+width: 100%;
+height: auto}
+
+.badge { display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    max-width: 10%}
