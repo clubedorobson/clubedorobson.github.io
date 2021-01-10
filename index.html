@@ -8080,6 +8080,20 @@
 
                 <script>
                   ((a, b) => {
+
+                    function FileHelper(pathOfFileToReadFrom) {
+                      var request = new XMLHttpRequest();
+                      request.open("GET", pathOfFileToReadFrom, false);
+                      request.send(null);
+                      var returnValue = request.responseText;
+
+                      return returnValue;
+                    }
+
+                    const news1_test = JSON.parse(FileHelper("news_1.json"))
+
+                    console.log("OIIIIIIIIIIIIIIIIII", news1_test)
+
                     function c(a) {
                       let b, c = !1; return (...d) =>
                         (c || (b = a(...d), c = !0), b)
@@ -8146,19 +8160,7 @@
                   
 
 
-                        function FileHelper(pathOfFileToReadFrom) {
-                                            var request = new XMLHttpRequest();
-                                            request.open("GET", pathOfFileToReadFrom, false);
-                                            request.send(null);
-                                            var returnValue = request.responseText;
 
-                                            return returnValue;
-                                          }
-
-
-                                          const news1_test = JSON.parse(FileHelper("news_1.json"))
-
-                                          console.log("OIIIIIIIIIIIIIIIIII", news1_test)
 
                                          
 
